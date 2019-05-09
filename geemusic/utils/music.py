@@ -258,7 +258,7 @@ class GMusicWrapper(object):
 
         if self.use_store and 'storeId' in track:
             return track, track['storeId']
-        elif 'id' in track:
+        elif 'id' in track and 'source' == '2':
             return self.library[track['id']], track['id']
         elif 'trackId' in track:
             return self.library[track['trackId']], track['trackId']
